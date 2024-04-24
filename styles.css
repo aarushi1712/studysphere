@@ -1,0 +1,174 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-size:16px;
+    color: rgb(188, 194, 201);
+    background-color: #1d3062;
+    /*Font family specifications needed for required font from google fonts*/
+    font-family: 'Oxygen', sans-serif;
+}
+#header-nav {
+    font-size: 18px !important;
+    color: #222 !important; /* Change font color */
+    background-color: #222 !important; /* Background color */
+}
+.navbar-brand {
+    color: rgb(188, 194, 201); /* Sets the color to the desired RGB value */
+}
+
+#items{
+    float: right;
+}
+#app-img{
+    margin-top: 15px;
+    border: 5px solid black;
+}
+#tiles{
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#pomodoro-tile, #studyrooms-tile, #chat-tile{
+    height: 250px; 
+    /* 100% width of container div */
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    border: 2px solid #3F0C1F;
+    overflow: hidden;
+}
+#pomodoro-tile:hover, #studyrooms-tile:hover, #chat-tile:hover{
+    box-shadow: 0 1px 5px 1px #CCCCCC;
+}
+#pomodoro-tile{
+    background: url("https://img.freepik.com/premium-vector/futuristic-scifi-glowing-hud-time-fading-abstract-time-machine-polygon-hitech-background-data-digital-clock-headup-display-interface-virtual-reality-technology-timer-deadline-concept_448804-568.jpg?w=360");
+    /* position center helps not worry about changing 
+    size of elements for diff media queries as diivs shrink */
+    background-position: center;
+}
+#studyrooms-tile{
+    background: url("https://img.freepik.com/premium-vector/open-book-education-concept-line-connection-low-poly-wireframe-design-abstract-geometric-background-vector-illustration_42421-1141.jpg");
+    background-position: center;
+}
+#chat-tile{
+    background: url("https://www.shutterstock.com/shutterstock/videos/16982848/thumb/1.jpg?ip=x480");
+    background-position: center;
+}
+#pomodoro-tile span, #studyrooms-tile span, #chat-tile span{
+    position: absolute;
+    width: 100%;
+    /* To get spans at bottom make position absolute and bottom and right 0*/
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    background-color: #000;
+    color: #fff;
+    opacity: .6;
+}
+.panel-footer{
+    margin-top: 30px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    background-color: #222;
+    border-top: 0;
+}
+#guidelines p{
+    line-height: 1.5;
+    font-style: italic;
+}
+#guideline p{
+    /* Changes the height between lines */
+    line-height: 1.5;
+    font-style: italic;
+}
+#guideline p:nth-child(2){
+    /* Margin for 2nd paragraph to seperate from first guideline */
+    margin-top: 20px;
+}
+/*Element and next element to menu_categories_title of same parent (sibling) */
+#studyrooms_title + div{
+    margin-bottom: 50px;
+}
+.study_room_tile .study_room_code{
+    font-size: 1em;
+    text-align: center;
+}
+.study_room_tile .study_room_code span{
+    font-size: .5em;
+}
+.study_room_photo{
+    position: relative;
+    border: 2px solid black;
+    overflow: hidden;
+    padding: 0;
+    /* Max width so that if size changes, image cannot be more big */
+    max-width: 220px;
+}
+.study_room_photo div{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    background-color: #557c3e;
+    text-align: center;
+}
+.study_room_description{
+    padding-right: 30px;
+}
+.study_room_title{
+    margin: 0 0 10px;
+}
+.study_room_details{
+    font-size: .9em;
+    font-style: italic;
+}
+
+@media(min-width: 1200px){
+    #app-img{
+        height:600px;
+        border: 5px solid black;
+        box-shadow: 0 0 50px #3F0C1F;
+    }
+}
+@media(max-width: 767px){
+    #app-img{
+        margin-top: 10px;
+    }
+    .panel-footer section{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .study_room_photo{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .study_room_tile .study_room_code{
+        text-align: center;
+    }
+    .study_room_description{
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+/* New CSS added to fix Navigation issues */
+
+a.nav-link {
+    color: red;
+}
+
+a.nav-link.active {
+    color: green;
+}
+
+.right .nav-link {
+    margin: 5px;
+    color: rgb(188, 194, 201);
+}
+
+.right {
+    display: flex;
+}
